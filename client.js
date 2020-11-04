@@ -7,9 +7,18 @@ const connect = function() {
     host: '135.23.222.131',
     port: 50542
   });
+  
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
 
+  // print a msg when connection established
+  conn.on('connect', () => {
+    console.log("Successfully connected to game server");
+    // send name to server via TCP
+    conn.write("Name: CIL");
+  })
+
+  // print data from server
   conn.on('data', (data) => {
     console.log(data);
   })

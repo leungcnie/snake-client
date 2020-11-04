@@ -16,6 +16,8 @@ const connect = function() {
     console.log("Successfully connected to game server");
     // send name to server via TCP
     conn.write("Name: CIL");
+    // automatically move up
+    // setInterval(() => conn.write("Move: up"), 50);
   })
 
   // print data from server

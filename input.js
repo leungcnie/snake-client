@@ -39,6 +39,15 @@ const handleUserInput = (key) => {
     case 'd':
       connection.write("Move: right");
       break;
+    case '1':
+      connection.write("Say: Sup");
+      break;
+    case '2':
+      connection.write("Say: Oh No");
+      break;
+    case '3':
+      connection.write("Say: AHHHH");
+      break;
   }
 }
 
